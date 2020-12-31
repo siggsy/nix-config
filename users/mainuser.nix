@@ -9,27 +9,58 @@ in
   programs.zsh.enable = true;
   programs.zsh.enableCompletion = true;
   programs.zsh.enableAutosuggestions = true;
+  programs.zsh.oh-my-zsh = {
+    enable = true;
+    plugins = [ "git" "sudo" "docker" ];
+    theme = "robbyrussell";
+  };
+
+  programs.neovim = {
+    enable = true;
+    vimAlias = true;
+    plugins = with pkgs.vimPlugins; [ vim-airline vim-nix gruvbox ];
+    extraConfig = ''
+      colorscheme gruvbox
+    '';
+  };
+
+  programs.git = {
+    enable = true;
+    userName = "lolek159";
+    userEmail = "zigaleskovec@gmail.com";
+  };
+
+  gtk = {
+    enable = true;
+    theme.name = "Materia-dark-compact";
+    iconTheme = {
+      name = "Papirus-Dark";
+    };
+  };
 
   home.packages = with pkgs; [
     # System utils
     htop
 
     # Development
-    git python3 go gcc openjdk
+    python3 go gcc openjdk
 
     # Editors
-    neovim vscode android-studio
-    jetbrains.idea-ultimate
-    jetbrains.idea-community
+    mySt
+    vscode
+    marktext
 
     # Image related
     krita
     ffmpeg
     
     # Web
-    firefox
     google-chrome
     youtube-dl
+
+    # Chat
+    zoom-us
+    discord
 
     # Themes
     gnome3.gnome-tweaks

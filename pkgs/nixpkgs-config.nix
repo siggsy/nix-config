@@ -11,5 +11,6 @@ in
     unstable = UnstableRepo;
     # Overriden packages here:
     # eg.: vimCustom = pkgs.callPackage ( builtins.toPath "${nixosConfigDir}/pkgs/overrides/vim.nix" ) { };
+    mySt = pkgs.callPackage (builtins.toPath "${nixosConfigDir}/pkgs/overrides/st.nix") { };
   };
 }
