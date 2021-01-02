@@ -17,6 +17,8 @@ in
     };
   };
 
+  # Enable virtualisation
+  virtualisation.libvirtd.enable = true;
 
   # Networking
   networking.hostName = "ziga-thinkpad";
@@ -27,7 +29,6 @@ in
     font = "Lat2-Terminus16";
     useXkbConfig = true;
   };
-  
   i18n.defaultLocale = "en_US.UTF-8";
   time.timeZone = "Europe/Ljubljana";
 }

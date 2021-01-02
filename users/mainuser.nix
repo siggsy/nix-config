@@ -37,13 +37,16 @@ in
       name = "Papirus-Dark";
     };
   };
+  xdg.configFile = {
+    "nixpkgs/config.nix".source = ../pkgs/nixpkgs-config.nix;
+  };
 
   home.packages = with pkgs; [
     # System utils
     htop
 
     # Development
-    python3 go gcc openjdk
+    python3
 
     # Editors
     mySt

@@ -7,6 +7,7 @@ in
 {
   allowUnfree = true;
   allowBroken = true;
+  android_sdk.accept_license = true;
   packageOverrides = pkgs: {
     unstable = UnstableRepo;
     # Overriden packages here:
