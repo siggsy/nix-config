@@ -8,7 +8,7 @@ in
     xserver = {
       enable = true;
       displayManager.gdm.enable = true;
-      desktopManager.gnome3.enable = true;
+      desktopManager.gnome.enable = true;
       layout = "us";
       xkbOptions = "caps:swapescape";
     };
