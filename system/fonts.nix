@@ -7,6 +7,7 @@
     fonts = with pkgs; [
       inconsolata
       fira-code
+      jetbrains-mono
       noto-fonts
       noto-fonts-extra
       noto-fonts-emoji
