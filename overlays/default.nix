@@ -8,9 +8,9 @@
   # You can change versions, add patches, set compilation flags, anything really.
   # https://nixos.wiki/wiki/Overlays
   modifications = final: prev: {
-    steam = prev.steam.overrideAttrs (oldAttrs: rec {
-      STEAM_FORCE_DESKTOPUI_SCALING = "1";
-    });
+    #steam = prev.steam.overrideAttrs (oldAttrs: rec {
+    #  STEAM_FORCE_DESKTOPUI_SCALING = "1";
+    #});
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will

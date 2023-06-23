@@ -6,6 +6,10 @@
     ../vscode.nix
   ];
 
+  home.sessionVariables = {
+    STEAM_FORCE_DESKTOPUI_SCALING = "1";
+  };
+
   home.packages = with pkgs; [
 
     steam
