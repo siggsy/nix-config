@@ -21,6 +21,9 @@
       vscjava.vscode-java-debug
       vscjava.vscode-java-dependency
       vscjava.vscode-java-test
+
+      # Haskell
+      haskell.haskell
     ];
 
     userSettings = {
@@ -30,9 +33,13 @@
 
       # Editor
       "editor.fontFamily" = "Victor Mono";
-      "editor.fontWeight" = "600";
+      "editor.fontWeight" = 600;
       "terminal.integrated.fontFamily" = "Victor Mono";
-      "terminal.integrated.fontWeight" = "600";
+      "terminal.integrated.fontWeight" = 600;
+
+      "editor.insertSpaces" = true;
+      "[nix]"."editor.tabSize" = 2;
+      "[haskell]"."editor.tabSize" = 2;
     };
   };
 }
