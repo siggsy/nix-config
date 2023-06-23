@@ -13,6 +13,7 @@
 
       # Nix
       bbenoist.nix
+      mkhl.direnv
 
       # Java
       redhat.java
