@@ -3,7 +3,7 @@
   imports = [
     ../.
     ./dconf.nix
-    ./vscode.nix
+    ../vscode.nix
   ];
 
   home.packages = with pkgs; [
