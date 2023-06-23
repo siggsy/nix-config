@@ -8,6 +8,10 @@
 
   networking.hostName = "gamma";
 
+  environment.sessionVariables = {
+    STEAM_FORCE_DESKTOPUI_SCALING = "1";
+  };
+
   users.users.ziga = {
     isNormalUser = true;
     description = "Žiga Leskovec";
