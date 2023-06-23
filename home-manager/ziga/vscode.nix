@@ -24,6 +24,7 @@
 
       # Haskell
       haskell.haskell
+      justusadam.language-haskell
     ];
 
     userSettings = {
