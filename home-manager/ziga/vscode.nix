@@ -2,6 +2,7 @@
   programs.vscode = {
     enable = true;
     enableExtensionUpdateCheck = false;
+    enableUpdateCheck = false;
     mutableExtensionsDir = false;
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
@@ -28,6 +29,8 @@
       # Editor
       "editor.fontFamily" = "Victor Mono";
       "editor.fontWeight" = "600";
+      "terminal.integrated.fontFamily" = "Victor Mono";
+      "terminal.integrated.fontWeight" = "600";
     };
   };
 }
