@@ -5,6 +5,7 @@
     enableUpdateCheck = false;
     mutableExtensionsDir = false;
     package = pkgs.vscodium;
+
     extensions = with pkgs.vscode-extensions; [
       # Vscode
       vscodevim.vim
@@ -21,6 +22,7 @@
       vscjava.vscode-java-dependency
       vscjava.vscode-java-test
     ];
+
     userSettings = {
       # Visibility
       "window.menuBarVisibility" = "toggle";
