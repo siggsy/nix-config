@@ -19,7 +19,15 @@
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; };
+    extraSpecialArgs = {
+      inherit inputs outputs;
+      dotfiles = rec {
+        ziga = {
+          home = "/home/ziga";
+          dotfiles = "${ziga.home}/.dotfiles/home-manager/ziga";
+        };
+      };
+    };
     users = {
       ziga = import ../../home-manager/ziga/gamma/home.nix;
     };

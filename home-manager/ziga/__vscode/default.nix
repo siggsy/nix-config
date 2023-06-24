@@ -1,20 +1,18 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{ inputs, outputs, lib, config, pkgs, dotfiles, ... }: {
 
   home.packages = with pkgs; [
     direnv
   ];
 
-  xdg.configFile."VSCodium/User/settings.json".source = config.lib.file.mkOutOfStoreSymlink
-    ./settings.json;
+  # Settings file symlinked for vscode and vscodium
+  home.file.".config/VSCodium/User/settings.json".source = config.lib.file.mkOutOfStoreSymlink "${dotfiles.ziga.dotfiles}/__vscode/settings.json";
+  home.file.".config/Code/User/settings.json".source = config.lib.file.mkOutOfStoreSymlink "${dotfiles.ziga.dotfiles}/__vscode/settings.json";
 
   programs.vscode = {
     enable = true;
-    enableExtensionUpdateCheck = false;
-    enableUpdateCheck = false;
-    mutableExtensionsDir = false;
     package = pkgs.vscodium;
 
-    extensions = with pkgs.vscode-extensions; [
+    extensions = with inputs.nixvsc.extensions.x86_64-linux.vscode-marketplace; [
       # Vscode
       vscodevim.vim
       pkief.material-icon-theme

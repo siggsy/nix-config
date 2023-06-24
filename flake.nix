@@ -9,6 +9,9 @@
     home-manager.url = "github:nix-community/home-manager/release-23.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Repo with daily vscode extension updates
+    nixvsc.url = "github:nix-community/nix-vscode-extensions";
+
     hardware.url = "github:nixos/nixos-hardware";
   };
 
