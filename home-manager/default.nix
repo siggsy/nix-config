@@ -25,6 +25,9 @@
         allowUnfreePredicate = (_: true);
       };
     };
+    xdg.configFile."nixpkgs/config.nix".text = ''
+      { allowUnfree = true; }
+    '';
 
     systemd.user.startServices = "sd-switch";
     programs.home-manager.enable = true;
