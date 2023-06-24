@@ -11,7 +11,7 @@
     #steam = prev.steam.overrideAttrs (oldAttrs: rec {
     #  STEAM_FORCE_DESKTOPUI_SCALING = "1";
     #});
-    lib = prev.lib // { my = import ./my-lib.nix; };
+    lib = prev.lib // { my = import ./my-lib.nix {}; };
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will

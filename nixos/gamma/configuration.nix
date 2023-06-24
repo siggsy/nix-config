@@ -1,8 +1,8 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
+
   imports = [
     ../.
     inputs.hardware.nixosModules.asus-zephyrus-ga402
-    outputs.homeManagerModules.location
     ./hardware-configuration.nix
   ];
 
@@ -21,7 +21,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
-      ziga = import ../../home-manager/ziga/gamma/home.nix;
+      ziga.imports = [ (pkgs.lib.my.mkDotpath "ziga" config.networking.hostName) ];
     };
   };
 

@@ -28,5 +28,6 @@
  
   "workbench.iconTheme": "material-icon-theme",
   "window.menuBarVisibility": "toggle",
-  "workbench.editor.showTabs": false
+  "workbench.editor.showTabs": false,
+  "window.zoomLevel": 2
 }
