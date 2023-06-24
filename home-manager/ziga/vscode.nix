@@ -1,4 +1,9 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
+
+  home.packages = with pkgs; [
+    direnv
+  ];
+
   programs.vscode = {
     enable = true;
     enableExtensionUpdateCheck = false;
@@ -10,6 +15,7 @@
       # Vscode
       vscodevim.vim
       pkief.material-icon-theme
+      catppuccin.catppuccin-vsc
 
       # Nix
       bbenoist.nix
@@ -29,9 +35,23 @@
     ];
 
     userSettings = {
-      # Visibility
+      # Style
       "window.menuBarVisibility" = "toggle";
       "workbench.iconTheme" = "material-icon-theme";
+      "workbench.colorTheme" = "Catppuccin Mocha";
+      "catppuccin.accentColor" = "pink";
+      "catppuccin.colorOverrides" = {
+          "mocha" = {
+              "base" = "#000000";
+              "mantle" = "#010101";
+              "crust" = "#020202";
+          };
+      };
+      "catppuccin.customUIColors" = {
+          "mocha" = {
+              "statusBar.foreground" = "accent";
+          };
+      };
 
       # Editor
       "editor.fontFamily" = "Victor Mono";
