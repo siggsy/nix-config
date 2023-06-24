@@ -2,7 +2,7 @@
 
   imports = [
     ../.
-    ./dconf.nix
+    ../__gnome
     ../__vscode
   ];
 

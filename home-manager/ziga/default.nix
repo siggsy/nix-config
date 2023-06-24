@@ -2,8 +2,8 @@
 
   imports = [
     ../.
-    ./zsh.nix
-    ./git.nix
+    ./__zsh
+    ./__git
   ];
 
   home = {
