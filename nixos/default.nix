@@ -1,5 +1,7 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
 
+  age.secrets.ziga.file = ../secrets/ziga.age;
+
   environment.systemPackages = with pkgs; [
     git
     vim
