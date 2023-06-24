@@ -16,7 +16,6 @@
     isNormalUser = true;
     description = "Žiga Leskovec";
     extraGroups = [ "networkmanager" "wheel" ];
-    passwordFile = config.age.secrets.ziga.path;
   };
 
   home-manager = {

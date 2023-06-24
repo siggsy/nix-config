@@ -13,10 +13,6 @@
 
     # Repo with daily vscode extension updates
     nixvsc.url = "github:nix-community/nix-vscode-extensions";
-
-    # Secrets management
-    agenix.url = "github:ryantm/agenix";
-
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -39,7 +35,6 @@
         modules = [
           ./nixos/${host}/configuration.nix
           inputs.home-manager.nixosModules.home-manager
-          inputs.agenix.nixosModules.default
         ];
       });
 
