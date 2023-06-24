@@ -2,7 +2,7 @@
   imports = [
     ../.
     inputs.hardware.nixosModules.asus-zephyrus-ga402
-    inputs.home-manager.nixosModules.home-manager
+    outputs.homeManagerModules.location
     ./hardware-configuration.nix
   ];
 
@@ -19,15 +19,7 @@
   };
 
   home-manager = {
-    extraSpecialArgs = {
-      inherit inputs outputs;
-      dotfiles = rec {
-        ziga = {
-          home = "/home/ziga";
-          dotfiles = "${ziga.home}/.dotfiles/home-manager/ziga";
-        };
-      };
-    };
+    extraSpecialArgs = { inherit inputs outputs; };
     users = {
       ziga = import ../../home-manager/ziga/gamma/home.nix;
     };

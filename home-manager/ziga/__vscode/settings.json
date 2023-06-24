@@ -7,6 +7,8 @@
   },
 
   "workbench.colorTheme": "Catppuccin Mocha",
+  "catppuccin.bracketMode": "neovim",
+  "catppuccin.accentColor": "pink",
   "catppuccin.colorOverrides": {
     "mocha": {
       "base": "#000000",
@@ -18,13 +20,13 @@
   "editor.fontFamily": "Victor Mono",
   "editor.fontWeight": 600,
   "editor.insertSpaces": true,
-  "extensions.autoCheckUpdates": false,
   "terminal.integrated.fontFamily": "Victor Mono",
   "terminal.integrated.fontWeight": 600,
+
+  "extensions.autoCheckUpdates": false,
   "update.mode": "none",
-  "window.menuBarVisibility": "toggle",
  
   "workbench.iconTheme": "material-icon-theme",
-  "catppuccin.accentColor": "pink",
-  "catppuccin.bracketMode": "dimmed"
+  "window.menuBarVisibility": "toggle",
+  "workbench.editor.showTabs": false
 }

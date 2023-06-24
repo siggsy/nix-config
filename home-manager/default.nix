@@ -1,5 +1,9 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
 
+  imports = [
+    outputs.homeManagerModules.location
+  ];
+
   nixpkgs = {
     # You can add overlays here
     overlays = [

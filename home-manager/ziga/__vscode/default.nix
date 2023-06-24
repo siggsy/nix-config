@@ -5,8 +5,8 @@
   ];
 
   # Settings file symlinked for vscode and vscodium
-  home.file.".config/VSCodium/User/settings.json".source = config.lib.file.mkOutOfStoreSymlink "${dotfiles.ziga.dotfiles}/__vscode/settings.json";
-  home.file.".config/Code/User/settings.json".source = config.lib.file.mkOutOfStoreSymlink "${dotfiles.ziga.dotfiles}/__vscode/settings.json";
+  home.file.".config/VSCodium/User/settings.json".source = config.lib.file.mkOutOfStoreSymlink "${config.home.dotpath}/__vscode/settings.json";
+  home.file.".config/Code/User/settings.json".source = config.lib.file.mkOutOfStoreSymlink "${config.home.dotpath}/__vscode/settings.json";
 
   programs.vscode = {
     enable = true;
