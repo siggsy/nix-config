@@ -1,0 +1,26 @@
+{
+  "[haskell]": {
+    "editor.tabSize": 2
+  },
+  "[nix]": {
+    "editor.tabSize": 2
+  },
+  "catppuccin.accentColor": "pink",
+  "catppuccin.colorOverrides": {
+    "mocha": {
+      "base": "#000000",
+      "crust": "#020202",
+      "mantle": "#010101"
+    }
+  },
+  "editor.fontFamily": "Victor Mono",
+  "editor.fontWeight": 600,
+  "editor.insertSpaces": true,
+  "extensions.autoCheckUpdates": false,
+  "terminal.integrated.fontFamily": "Victor Mono",
+  "terminal.integrated.fontWeight": 600,
+  "update.mode": "none",
+  "window.menuBarVisibility": "toggle",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "material-icon-theme"
+}
