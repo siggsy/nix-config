@@ -1,7 +1,7 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
 
   options = {
-    home.dotpath = mkOption {
+    home.dotpath = with lib; mkOption {
       type = types.path;
       description = "Path to the dotfiles (eg. /path/to/home-manager/$username)";
       default = "${config.home.homeDirectory}/.dotfiles/home-manager/${config.home.username}";
